@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
+/* @charset utf-8; */
+
+/* @charset "utf-8"; */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Inter", sans-serif;
+  /* font-weight: lighter; */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: rgb(56, 226, 248);
+  font-weight: bold;
+  margin: 20px;
+}
+
+.demoClass {
+  margin: 20px;
+}
+
+.pTag {
+  line-height: 25px;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* a:hover{
+    background-color: orange;
+    color: rgb(62, 62, 63);
+} */
+
+/* a::before{
+    content: 'click here: ';
+} */
+
+p::first-letter {
+  font-size: 25px;
+}
+
+p::first-line {
+  font-style: italic;
+}
+
+p::selection {
+  background-color: #333;
+}
+
+nav {
+  display: block;
+  text-align: end;
+  background-color: rgb(96, 96, 226);
+  padding: 10px 15px;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  box-shadow: 1px 1px 5px #000;
+}
+
+input {
+  padding: 10px 15px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+/*
+input:focus {
+  outline: none;
+  box-shadow: 1px 1px 4px #000;
+} */
+
+/* button {
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: rgb(199, 243, 174);
+  outline: none;
+  color: green;
+  font-size: 16px;
+  border: 1px solid #333;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out transform;
+} */
+
+/* button:hover {
+  background-color: darkgreen;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+} */
+
+#secondDiv {
+  margin: 20px;
+  padding: 10px;
+  background: #ccc;
+}
+
+/* Animations */
+
+/* p {
+  animation-duration: 3s;
+  animation-name: slidein;
+} */
+
+/* @font-face {
+  font-family: ;
+  src: url();
+} */
+
+/* @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
+
+@media only screen and (max-width: 600px){
+  #secondDiv{
+    background-color: deepskyblue;
+  }
+}
+@media screen and (min-width: 768px){
+  #secondDiv{
+    background-color: coral;
+  }
+}
+@media screen and (min-width: 992px) and (max-width:1280px){
+  #secondDiv{
+    background-color:violet;
+  }
+}
+
+em{
+  color: #fff;
+} */
+
+/* Descendenct selector */
+
+/* nav a{
+  color: chocolate;
+  background-color: #000;
+} */
+
+/*  child selector */
+
+/* nav > a{
+  color: chocolate;
+  background-color: #000;
+} */
+
+/* section > a{
+  color: chocolate;
+  background-color: #000;
+} */
+
+/* general adjscent selector */
+
+/* .a:hover ~ b{
+  background-color: fuchsia;
+} */
+
+/* adjscent sibling selector */
+
+/* a + a{
+  background-color: aqua;
+} */
+
+/* b + em{
+  background-color: aqua;
+} */
+
+/* Attribure selector */
+
+/* [type="text"]{
+  box-shadow: 1px 1px 4px rgb(49, 49, 49);
+}
+[type]{
+  border: 2px dotted red;
+} */
+
+/* nav {
+  position: sticky;
+  top: 0;
+} */
+
+h1 {
+  background: linear-gradient(90deg, red, blue);
+  background-clip: border-box;
+  background-clip: text;
+  color: transparent;
+}
+
+.formSection {
+  margin: 15px;
+  padding: 20px;
+}
+
+.modalDiv {
+  display: none;
+  /* display: flex; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.705);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay-text {
+  font-size: 36px;
+  color: #fff;
+}
+
+.overlay-text > button {
+  font-size: 16px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}
+
+.loading::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 8px solid #dddddd;
+  border-top-color: #17f7b4;
+  border-radius: 50%;
+  animation: loading .5s ease infinite;   
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn); 
+  }
+}
+
+.modalDiv.show {
+  display: flex;
+}

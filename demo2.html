@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link href="" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* box-sizing: border-box; */
+      }
+
+      nav {
+        background: #dce0e4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav > div > a {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        padding: 5px;
+        margin: 10px;
+      }
+
+      .center {
+        text-align: center;
+      }
+      .mainDiv {
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      label,
+      .mainDiv > h1 {
+        margin: 10px;
+      }
+      /* label{
+        margin: 10px;
+      } */
+      form {
+        /* padding: 8px; */
+        margin: 20px;
+        border: 2px solid rgb(146, 146, 146);
+      }
+      .form-group {
+        margin: 15px;
+      }
+      .red {
+        color: indianred;
+      }
+      .green {
+        color: greenyellow;
+      }
+    </style>
+    <!-- <script></script> -->
+  </head>
+  <body>
+    <!-- 1st section -->
+    <section>
+      <header>
+        <nav>
+          <a href="https://www.indianeagle.com">
+            <img
+              src="https://www.indianeagle.com/images/IE-Retina-New.svg"
+              alt=""
+              srcset=""
+            />
+          </a>
+          <div>
+            <a href="demo.html">Contact Us</a>
+            <a href="index.html">
+              <span class="material-icons">assignment_returned</span>
+            </a>
+            <a href="##">Profile</a>
+            <!-- <span class="material-icons md-48">face</span> -->
+            <span class="material-icons md-48">sensors</span>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <main>
+      <h1 class="center green">
+        Registration form
+        <!-- <p id="eer">this is some text</p> -->
+      </h1>
+      <div class="mainDiv">
+        <form action="" method="" id="signup">
+          <div class="form-group">
+            <label for="">FirstName</label>
+            <input type="text" name="FirstName" id="id1" required />
+          </div>
+          <div class="form-group">
+            <label for="">LastName</label>
+            <input type="text" name="LastName" id="id2" required />
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="Email" id="id3" required />
+          </div>
+          <div class="form-group">
+            <label for="">Contact</label>
+            <input type="tel" name="Contact" id="id4" required />
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" name="Password" id="id5" required />
+          </div>
+          <div class="form-group">
+            <label for="">Gender</label>
+            <input type="radio" name="gender" value="male" id="" required />
+            <label for="">Male</label>
+            <input type="radio" name="gender" value="female" id="" required />
+            <label for="">Female</label>
+          </div>
+          <div class="form-group">
+            <label for="">Select Country</label>
+            <select name="Country" id="" required>
+              <option value="India">India</option>
+              <option value="Japan">Japan</option>
+              <option value="Germany">Germany</option>
+            </select>
+          </div>
+          <!-- <div class="form-group">
+            <label for="">FirstName</label>
+            <input type="text" name="" id="" required />
+          </div> -->
+          <div class="center">
+            <!-- <button type="submit" id="kuchh_bhi" onclick="loadStuff()">SUBMIT</button> -->
+            <!-- <button type="submit" id="kuchh_bhi" onclick="checkEvents()">SUBMIT</button> -->
+            <button type="submit" id="btn" onclick="">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
