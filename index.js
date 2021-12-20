@@ -527,21 +527,27 @@ btn.addEventListener("click", function (event) {
 // we can create a regex with (/ /)
 // it is case sensitive 
 
-const regex = /Ok/ig      
+let regex;
+regex = /Ok/;      
+regex = /Ok/i;         
+regex = /Ok/g;      
 
 // const regex = new RegExp('h');
 
-let str = "ok Hello how are you? ok";
-console.log(str);
-console.log(regex);
+// let str = "ok Hello how are you? ok";
+
+// console.log(str);
+// console.log(regex);
+// console.log(regex.source);
 // let result = regex.test(str)
 // let result = str.match(regex);
-let result = str.replace(regex,'Fine');
-console.log(result)
+// let result = str.replace(regex,'Fine');
+// console.log(result)
 
 /* pattern flags */
 // (i) - ignore flag - used to ignore cases 
 // (g) - global flag - checks all the occurances
+// (m) - multi-line - will allow multiline strings.
 
 /* Character classes*/
 // it is also called as character set -  used to match any symbol from a character set.
@@ -550,6 +556,63 @@ console.log(result)
 // (\d) - match a digit or a character from 0 to 9.
 // (\s) - match a whitespace (tab - \t, newline - \n, space)
 // (\w) - matches ASCII characters ex [A-Za-z0-9_]
+// (\b) - boundry of particular string
+
+// Inverse classes
+// (\D) - Except 0-9 everything will be matched.
+// (\S) - Except whitespaces, tabs , newline everthing will be matched.
+// (\W) - Except [A-Za-z0-9_] everthing will be matched.
+
+// quantifiers
+// (.) - dot It is used to match only one (any)character except newline;
+// (*) - Astrisk is used to match one or more characters
+// (+) - plus is used to match zero or more characters
+// {} - curly braces  used to match multiple characters
+// (?) - optional used to match multiple characters
+
+// (^) - caret used to specify starting digit/character 
+// ($) - caret used to specify ending digit/character 
+
+
+// Sets and Ranges
+
+// let str = "+1-(408)-555-0105";
+let str = 'Hello dfsdfds esff';
+let str = 'hi i\'m fine';
+// let str = "Hello 1234f 4545 45435435";
+// let str = "Hello";
+// console.log(str);
+
+regex = /\d/
+regex = /\D/      // Inverse
+regex = /\s/
+regex = /\S/      // Inverse
+regex = /\w/gi
+regex = /\W/gi    // Inverse
+regex = /\d/g
+regex = /h.llo/gi
+// regex = /\d*/g
+regex = /^h?H?ello/g
+regex = /^[A-Za-z0-9][0-9]ello/g
+regex = /^[A-Za-z0-9][0-9]ell[oO]$/g
+regex = /h\w*/gi
+regex = /\d{4}./gi
+regex = /\d*/gi
+regex = /\D+/gi
+regex = /\w+/gi
+regex = /\S/gi
+regex = /^[^A-Za-z]ello$/g
+
+
+const result1 = str.match(regex);
+// console.log(typeof Number(result1.join('')));
+console.log(result1);
+
+
+
+// Email
+var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+// abc@yahoo.com/org/in/edu/co.in
  
 
 
