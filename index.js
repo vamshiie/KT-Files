@@ -319,7 +319,7 @@ document.getElementsByTagName("h1");
 document.querySelector("[attribute]");
 document.querySelectorAll(".class"); // array-like-object not array-object
 
-/* Traversing Elements */
+/* Traversing Elements/DOM */
 document.parentNode;
 document.nextElementSibiling;
 document.previousElementSibling;
@@ -545,8 +545,8 @@ regex = /Ok/g;
 // console.log(result)
 
 /* pattern flags */
-// (i) - ignore flag - used to ignore cases 
-// (g) - global flag - checks all the occurances
+// (i) - ignore flag - used to ignore cases.
+// (g) - global flag - checks all the occurances.
 // (m) - multi-line - will allow multiline strings.
 
 /* Character classes*/
@@ -556,29 +556,32 @@ regex = /Ok/g;
 // (\d) - match a digit or a character from 0 to 9.
 // (\s) - match a whitespace (tab - \t, newline - \n, space)
 // (\w) - matches ASCII characters ex [A-Za-z0-9_]
-// (\b) - boundry of particular string
+// (\b) - word - boundry of particular string
 
 // Inverse classes
 // (\D) - Except 0-9 everything will be matched.
 // (\S) - Except whitespaces, tabs , newline everthing will be matched.
 // (\W) - Except [A-Za-z0-9_] everthing will be matched.
 
-// quantifiers
-// (.) - dot It is used to match only one (any)character except newline;
-// (*) - Astrisk is used to match one or more characters
-// (+) - plus is used to match zero or more characters
-// {} - curly braces  used to match multiple characters
-// (?) - optional used to match multiple characters
+// quantifiers (shorthand)
+// (.) - dot It is used to match only one (any)character except newline.
+// (*) - Astrisk is used to match one or more characters.
+// (+) - plus is used to match zero or more characters.
+// {} - curly braces  used to match multiple characters.
+// (?) - optional used to match multiple characters.
 
-// (^) - caret used to specify starting digit/character 
-// ($) - caret used to specify ending digit/character 
+// (^) - caret used to specify starting digit/character. 
+// ($) - dollar used to specify ending digit/character.
 
 
 // Sets and Ranges
+// [] - we can specify characters set ex: [A-Za-z0-9]
+// {} - we can specify range of characters to match ex: {2,5},{2,}
+// () - Grouping - used to specify groups of sets.
 
 // let str = "+1-(408)-555-0105";
-let str = 'Hello dfsdfds esff';
-let str = 'hi i\'m fine';
+let str = 'Hello dfsdfds esff ahell sdfsdf hell';
+// let str = 'hi i\'m fine';
 // let str = "Hello 1234f 4545 45435435";
 // let str = "Hello";
 // console.log(str);
@@ -602,12 +605,12 @@ regex = /\D+/gi
 regex = /\w+/gi
 regex = /\S/gi
 regex = /^[^A-Za-z]ello$/g
+regex = /\bhell\b/ig
 
 
 const result1 = str.match(regex);
 // console.log(typeof Number(result1.join('')));
 console.log(result1);
-
 
 
 // Email
